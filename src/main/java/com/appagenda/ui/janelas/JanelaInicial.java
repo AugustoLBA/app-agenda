@@ -8,7 +8,7 @@ import javax.swing.*;
 @Getter
 @Setter
 @Component("JanelaInicial")
-public class JanelaInicial extends JanelaPadrao{
+public class JanelaInicial extends JanelaPadrao {
 
     private JButton novoContato;
 
