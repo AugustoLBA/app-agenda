@@ -10,8 +10,8 @@ import lombok.*;
 @ToString
 public class ContatoDTO {
 
-    @NotBlank
+    @NotBlank(message = "O nome nao pode ser vazio!")
     private String nome;
-    @NotBlank
+    @NotBlank(message = "O numero nao pode ser vazio!")
     private String numero;
 }
