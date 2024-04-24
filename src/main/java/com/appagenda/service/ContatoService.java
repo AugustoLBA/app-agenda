@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ContatoService {
@@ -62,6 +63,13 @@ public class ContatoService {
         ContatoResponseDTO contatoResponseDTO = new ContatoResponseDTO();
         BeanUtils.copyProperties(contato, contatoResponseDTO);
         return contatoResponseDTO;
+    }
+    // Metodo que retorna uma lista de ContatoResponseDTO
+    public List<ContatoResponseDTO> toListDto(List<Contato> contatos){
+        // Basicamente esse método pega cada contato da lista de contato
+        // e transforma em um contatoResponseDto e adiciona em uma lista
+        // de contatoResponseDto.
+        return contatos.stream().map(contato -> toContatoResponseDto(contato)).collect(Collectors.toList());
     }
 
 }
