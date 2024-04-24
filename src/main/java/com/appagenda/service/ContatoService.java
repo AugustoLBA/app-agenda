@@ -25,5 +25,15 @@ public class ContatoService {
         Optional<Contato> contato = repository.findById(id);
         return contato.get();
     }
+    public boolean atualizarContato(Long id, Contato contato){
+        Contato contatoAux = buscarContatoId(id);
+        if(contatoAux != null){
+            contatoAux.setNome(contato.getNome());
+            contatoAux.setNumero(contato.getNumero());
+            repository.save(contatoAux);
+            return true;
+        }
+        return false;
+    }
 
 }
