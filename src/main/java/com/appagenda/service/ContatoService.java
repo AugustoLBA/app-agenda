@@ -35,5 +35,13 @@ public class ContatoService {
         }
         return false;
     }
+    public boolean deletarContatoId(Long id){
+        try {
+            repository.deleteById(id);
+            return true;
+        }catch (RuntimeException ex){
+            return false;
+        }
+    }
 
 }
