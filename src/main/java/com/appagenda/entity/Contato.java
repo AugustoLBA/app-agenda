@@ -19,10 +19,10 @@ public class Contato implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "nome")
+    @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Column(name = "numero")
+    @Column(name = "numero", nullable = false)
     private String numero;
 
 }
