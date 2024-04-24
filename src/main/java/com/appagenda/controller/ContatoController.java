@@ -31,4 +31,8 @@ public class ContatoController {
     public boolean updateContato(@Valid Long id, ContatoDTO contatoDTO){
         return service.atualizarContato(id,service.toContato(contatoDTO));
     }
+
+    public boolean deleteById(Long id){
+        return service.deletarContatoId(id);
+    }
 }
