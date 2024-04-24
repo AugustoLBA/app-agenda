@@ -27,4 +27,8 @@ public class ContatoController {
     public ContatoResponseDTO findById(Long id){
         return service.toContatoResponseDto(service.buscarContatoId(id));
     }
+
+    public boolean updateContato(@Valid Long id, ContatoDTO contatoDTO){
+        return service.atualizarContato(id,service.toContato(contatoDTO));
+    }
 }
