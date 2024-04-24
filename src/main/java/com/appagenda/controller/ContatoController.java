@@ -24,4 +24,7 @@ public class ContatoController {
     public List<ContatoResponseDTO> findAll(){
         return service.toListDto(service.listarContatos());
     }
+    public ContatoResponseDTO findById(Long id){
+        return service.toContatoResponseDto(service.buscarContatoId(id));
+    }
 }
