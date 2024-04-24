@@ -1,6 +1,7 @@
 package com.appagenda.service;
 
 import com.appagenda.dto.ContatoDTO;
+import com.appagenda.dto.ContatoResponseDTO;
 import com.appagenda.entity.Contato;
 import com.appagenda.repository.ContatoRepository;
 import org.springframework.beans.BeanUtils;
@@ -54,6 +55,13 @@ public class ContatoService {
         Contato contato = new Contato();
         BeanUtils.copyProperties(contatoDTO,contato);
         return contato;
+    }
+
+    // Metodo que converte um Contato para um ContatoResponseDTO
+    public ContatoResponseDTO toContatoResponseDto(Contato contato){
+        ContatoResponseDTO contatoResponseDTO = new ContatoResponseDTO();
+        BeanUtils.copyProperties(contato, contatoResponseDTO);
+        return contatoResponseDTO;
     }
 
 }
