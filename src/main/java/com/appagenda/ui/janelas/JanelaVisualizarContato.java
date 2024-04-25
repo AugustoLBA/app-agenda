@@ -1,6 +1,7 @@
 package com.appagenda.ui.janelas;
 
 import com.appagenda.dto.ContatoResponseDTO;
+import com.appagenda.ui.ouvintes.OuvinteJanelaVisualizarContatos;
 import com.appagenda.ui.utils.JButtonPadrao;
 import com.appagenda.ui.utils.JScrollPanePadrao;
 import com.appagenda.ui.utils.JTablePadrao;
@@ -39,13 +40,18 @@ public class JanelaVisualizarContato extends JanelaPadrao{
     @Override
     public void addJButton() {
 
+        OuvinteJanelaVisualizarContatos ouvinte = new OuvinteJanelaVisualizarContatos(this);
+
         voltar = JButtonPadrao.criarJbutton("Voltar",100,400,80,30, Color.YELLOW);
+        voltar.addActionListener(ouvinte);
         this.add(voltar);
 
         editar = JButtonPadrao.criarJbutton("Editar",310,400,80,30,Color.YELLOW);
+        editar.addActionListener(ouvinte);
         this.add(editar);
 
         excluir = JButtonPadrao.criarJbutton("Excluir",500,400,80,30,Color.YELLOW);
+        excluir.addActionListener(ouvinte);
         this.add(excluir);
 
     }
