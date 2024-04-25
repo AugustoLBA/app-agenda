@@ -1,5 +1,6 @@
 package com.appagenda.ui.janelas;
 
+import com.appagenda.ui.ouvintes.OuvinteJanelaInicial;
 import com.appagenda.ui.utils.JButtonPadrao;
 import com.appagenda.ui.utils.JLabelPadrao;
 import lombok.Getter;
@@ -27,13 +28,18 @@ public class JanelaInicial extends JanelaPadrao {
     @Override
     public void addJButton() {
 
+        OuvinteJanelaInicial ouvinte = new OuvinteJanelaInicial(this);
+
         novoContato = JButtonPadrao.criarJbutton("Novo Contato",275,250,150,30, Color.YELLOW);
+        novoContato.addActionListener(ouvinte);
         this.add(novoContato);
 
         visualizarContatos = JButtonPadrao.criarJbutton("Visualizar Contatos",275,300,150,30,Color.YELLOW);
+        visualizarContatos.addActionListener(ouvinte);
         this.add(visualizarContatos);
 
         sair = JButtonPadrao.criarJbutton("Sair",275,350,150,30,Color.YELLOW);
+        sair.addActionListener(ouvinte);
         this.add(sair);
 
     }

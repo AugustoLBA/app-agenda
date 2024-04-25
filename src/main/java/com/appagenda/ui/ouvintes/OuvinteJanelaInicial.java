@@ -9,6 +9,10 @@ import java.awt.event.ActionListener;
 public class OuvinteJanelaInicial implements ActionListener {
 
     private JanelaInicial janelaInicial;
+
+    public OuvinteJanelaInicial(JanelaInicial janelaInicial){
+        this.janelaInicial = janelaInicial;
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
