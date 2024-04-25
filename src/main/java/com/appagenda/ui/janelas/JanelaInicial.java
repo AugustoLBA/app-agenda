@@ -1,6 +1,7 @@
 package com.appagenda.ui.janelas;
 
 import com.appagenda.ui.utils.JButtonPadrao;
+import com.appagenda.ui.utils.JLabelPadrao;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
@@ -43,7 +44,9 @@ public class JanelaInicial extends JanelaPadrao {
     }
 
     @Override
-    public void addJLbel() {
+    public void addJLabel() {
+        JLabel titulo = JLabelPadrao.criarJlabel("Bem Vindo",275,20,130,30,25);
+        this.add(titulo);
 
     }
 }

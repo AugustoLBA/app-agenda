@@ -8,8 +8,9 @@ public class JLabelPadrao {
     public static JLabel criarJlabel(String txt, int x,int y,int z, int w,int tamanhoFonte){
         JLabel label = new JLabel();
         label.setFont(new Font("Arial", Font.BOLD,tamanhoFonte));
-        label.setForeground(Color.WHITE);
-        label.setOpaque(false);
+        label.setText(txt);
+        label.setForeground(Color.RED);
+        label.setOpaque(true);
         label.setBounds(x,y,z,w);
         return label;
     }

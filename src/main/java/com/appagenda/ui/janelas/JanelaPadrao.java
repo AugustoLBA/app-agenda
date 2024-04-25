@@ -1,6 +1,7 @@
 package com.appagenda.ui.janelas;
 
 import javax.swing.*;
+import java.awt.*;
 
 public abstract class JanelaPadrao extends JFrame {
 
@@ -11,10 +12,11 @@ public abstract class JanelaPadrao extends JFrame {
         this.setLayout(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
+        this.setBackground(Color.BLACK);
 
         // Métodos que toda classe que herda deverá
         // implementar de acordo com sua necessidade
-        addJLbel();
+        addJLabel();
         addJTextField();
         addJButton();
         addImg();
@@ -28,6 +30,6 @@ public abstract class JanelaPadrao extends JFrame {
 
     public abstract void addJTextField();
 
-    public abstract void addJLbel();
+    public abstract void addJLabel();
 
 }
