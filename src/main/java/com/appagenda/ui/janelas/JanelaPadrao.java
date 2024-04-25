@@ -8,7 +8,7 @@ import java.awt.*;
 
 public abstract class JanelaPadrao extends JFrame {
     @Autowired
-    private ContatoController controller;
+    public ContatoController controller;
 
     public JanelaPadrao(){
         this.setTitle("Janela");
