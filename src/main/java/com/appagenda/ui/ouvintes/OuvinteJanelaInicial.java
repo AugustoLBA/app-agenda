@@ -26,6 +26,9 @@ public class OuvinteJanelaInicial implements ActionListener {
             new JanelaVisualizarContato(janelaInicial.controller.findAll()).controller = janelaInicial.controller;
 
         }
+        if(e.getSource() == janelaInicial.getSair()){
+            janelaInicial.dispose();
+        }
 
     }
 }
