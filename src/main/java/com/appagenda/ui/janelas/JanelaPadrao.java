@@ -12,7 +12,7 @@ public abstract class JanelaPadrao extends JFrame {
 
     public JanelaPadrao(){
         this.setTitle("Janela");
-        this.setSize(700, 700);
+        this.setSize(700, 500);
         this.setLocationRelativeTo(null);
         this.setLayout(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
