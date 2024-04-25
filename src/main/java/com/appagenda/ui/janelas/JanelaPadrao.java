@@ -1,9 +1,14 @@
 package com.appagenda.ui.janelas;
 
+import com.appagenda.controller.ContatoController;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.swing.*;
 import java.awt.*;
 
 public abstract class JanelaPadrao extends JFrame {
+    @Autowired
+    private ContatoController controller;
 
     public JanelaPadrao(){
         this.setTitle("Janela");
